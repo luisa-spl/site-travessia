@@ -1,0 +1,10 @@
+@use '../../../assets/styles/colors.scss' as colors;
+
+.section {
+    min-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    background-color: colors.$color-neutral-gray;
+}
