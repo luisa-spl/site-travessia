@@ -12,6 +12,14 @@ export function Title({ children }: TypographyProps) {
     );
 }
 
+export function Subtitle({ children }: TypographyProps) {
+    return (
+        <h2 className={s.subtitle}>
+            {children}
+        </h2>
+    )
+}
+
 export function Paragraph({ children }: TypographyProps) {
     return (
         <p className={s.paragraph}>

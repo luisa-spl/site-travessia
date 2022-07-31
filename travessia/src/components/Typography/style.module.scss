@@ -15,6 +15,13 @@
     }
 }
 
+.subtitle {
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+}
+
 .paragraph {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
@@ -27,4 +34,9 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 300;
+
+    @media screen and (max-width: 680px){
+        font-size: 12px;
+        line-height: 12px;
+    }
 }

@@ -32,16 +32,6 @@ export function Footer() {
             <div id="travessia-logo">
                 <img src={Logo} alt="logotipo" width={RESPONSIVE ? "180px" : "250px"} height={RESPONSIVE ? "180px" : "250px"} />
             </div>
-            {/* <div>
-                <iframe
-                    title="mapa"
-                    width="290"
-                    height="220" 
-                    id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=Rua%20Professor%20indalecio%20de%20Melo,%2091&t=&z=17&ie=UTF8&iwloc=&output=embed"
-                    scrolling="no"
-                />
-            </div> */}
             <div className={s['footer-container-buttons']}>
                 <div className={s['footer-buttons']}>
                     <button className={s['facebook-button']}>
