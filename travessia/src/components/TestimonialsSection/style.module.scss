@@ -1,0 +1,58 @@
+@use '../../assets/styles/colors.scss' as colors;
+
+.testimonials-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 620px;
+    padding: 40px;
+    background-image: url('../../assets/img/bg-primary-circles.png');
+    color: colors.$color-brand-primary-pure;
+
+    @media (max-width: 680px) {
+        align-items: center;
+        height: min-content;
+        padding: 32px;
+        gap: 32px;
+
+        h1 {
+            font-size: 28px;
+            line-height: 28px;
+        }
+    }
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 380px;
+}
+
+.description {
+    font-family: "Rubik", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: justify;
+
+    @media (max-width: 680px) {
+        font-size: 16px;;
+    }
+}
+
+.testimonials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: colors.$color-brand-primary-pure;
+    font-weight: bold;
+
+    @media (max-width: 680px) {
+        max-width: 280px;
+        flex-direction: column;
+        gap: 32px;
+    }
+}
