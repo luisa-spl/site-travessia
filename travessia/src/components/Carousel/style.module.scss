@@ -1,0 +1,72 @@
+.swiper {
+    overflow: visible;
+    width: 100%;
+    margin-left: 60px;
+  
+    & :global(.swiper-slide):last-child {
+      margin-right: 128px !important;
+    }
+  }
+  
+  .main {
+    width: 100%;
+    height: max-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+  
+    &:hover button {
+      opacity: 1;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+  
+  .chevron-left {
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    height: 64px;
+    width: 40px;
+    background-color: rgba(58, 59, 64, 0.9);
+    border-bottom-right-radius: 12px;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  
+    svg {
+      transform: rotate(180deg);
+  
+      path {
+        stroke: white;
+      }
+    }
+  }
+  
+  .chevron-right {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    height: 64px;
+    width: 40px;
+    background-color: rgba(58, 59, 64, 0.9);
+    border-bottom-left-radius: 12px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  
+    svg {
+      path {
+        stroke: white;
+      }
+    }
+  
+  }
+  
