@@ -1,7 +1,7 @@
-import { ReactNode } from 'react';
+import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
 import s from './style.module.scss';
 
-interface ButtonProps {
+interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
     variant: 'primary' | 'secondary' | 'tertiary';
     onClick(): void;
     children: ReactNode;
