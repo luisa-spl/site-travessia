@@ -1,0 +1,47 @@
+.content {
+	position: fixed !important;
+	right: 40px !important;
+	bottom: 40px !important;
+	padding: 24px !important;
+	width: 22.5rem !important;
+	margin: 0 !important;
+	background-color: white;
+	border-radius: 12px;
+	z-index: 2;
+	// box-shadow: var(--chakra-shadows-level3);
+}
+
+.title {
+	text-align: center;
+}
+
+.body {
+	font-size: 14px;
+	line-height: 150%;
+	text-align: center;
+	margin-top: 12px;
+
+	a {
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		margin-top: .2rem;
+	}
+}
+
+.footer {
+	display: flex;
+	justify-content: center !important;
+	padding: 12px 0 0 0 !important;
+	margin-top: 8px;
+
+	> :first-child {
+		margin-right: 12px;
+	}
+}
+
+.button {
+	font-size: 14px !important;
+}
+
+
