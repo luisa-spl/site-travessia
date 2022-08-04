@@ -3,6 +3,8 @@ import { Button } from '../../components/Button';
 import { Span, Subtitle, Title } from '../../components/Typography';
 import s from './style.module.scss';
 
+const PHONE = '5511982123172'
+
 export function ContactsSection() {
     const [RESPONSIVE] = useMediaQuery("(max-width: 680px)");
 
@@ -37,14 +39,27 @@ export function ContactsSection() {
                         WhatsApp: (11) 98212-3172
                     </Span>
                 </div>
+                <div className={s.address}>
+                    <Subtitle>
+                        E-mail
+                    </Subtitle>
+                    <Span>
+                       contato@travessiapilates.com.br
+                    </Span>
+                </div>
                 <div className={s['benefits-action-button']}>
                     <Button
                         variant="primary"
                         type="button"
-                        onClick={() => ('')}
+                        onClick={
+                            () => window.open(
+                                `https://wa.me/${PHONE}?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20
+                                informações%20sobre%20o%20espaço.%20Meu%20nome%20é`
+                            )
+                        }
                         id='benefits-action-button'
                     >
-                        Fale com a gente
+                        Agende sua aula experimental
                     </Button>
                 </div>
             </div>

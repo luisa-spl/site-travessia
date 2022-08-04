@@ -4,18 +4,21 @@ import { ReactComponent as Insta } from '../../assets/svg/instagram.svg';
 import { ReactComponent as Youtube } from '../../assets/svg/youtube.svg';
 import { ReactComponent as Whats } from '../../assets/svg/whatsapp.svg';
 import { useMediaQuery } from '@chakra-ui/react';
-import Logo from '../../assets/img/5_brown.png';
+import Logo from '../../assets/img/logo.png';
 import s from './style.module.scss';
+import { useNavigate } from 'react-router-dom';
+const PHONE = '5511982123172';
 
 export function Footer() {
     const [RESPONSIVE] = useMediaQuery("(max-width: 680px)")
+    const navigate = useNavigate();
 
     return (
         <div className={s['footer-container']}>
             {!RESPONSIVE && (
                 <div className={s['contact-info']}>
                 <Span>
-                    © Travessia Pilates
+                    © TP
                 </Span>
                 <Span>
                     Rua Professor Indalécio de Melo, 91
@@ -34,22 +37,29 @@ export function Footer() {
             </div>
             <div className={s['footer-container-buttons']}>
                 <div className={s['footer-buttons']}>
-                    <button className={s['facebook-button']}>
+                    <button className={s['facebook-button']} onClick={() => window.open('https://www.facebook.com/travessiapilates')}>
                         <Face width="24px" height="24px" />
                     </button>
-                    <button className={s['youtube-button']}>
+                    <button className={s['youtube-button']} onClick={() => window.open('https://www.youtube.com/c/travessiapilates')}>
                         <Youtube width="24px" height="24px"/>
                     </button>
-                    <button className={s['instagram-button']}>
+                    <button className={s['instagram-button']} onClick={() => window.open('https://instagram.com/travessiapilates')}>
                         <Insta width="24px" height="24px"/>
                     </button>
-                    <button className={s['whatsapp-button']}>
+                    <button
+                        className={s['whatsapp-button']}
+                        onClick={
+                            () => window.open(
+                                `https://wa.me/${PHONE}?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20
+                                informações%20sobre%20o%20espaço.%20Meu%20nome%20é`
+                            )
+                        }>
                         <Whats width="24px" height="24px"/>
                     </button>
                 </div>
-                <div className={s['privacy-policy-button']}>
-                    <a href="">Política de Privacidade</a>
-                </div>
+                <button className={s['privacy-policy-button']} onClick={() => navigate('/privacidade')}>
+                    Política de Privacidade
+                </button>
             </div>
 
             {RESPONSIVE && (
