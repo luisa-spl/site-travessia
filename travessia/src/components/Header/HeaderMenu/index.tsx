@@ -1,7 +1,8 @@
 import s from './style.module.scss';
-import { Button } from 'components/Button';
-import {HamburgerIcon, ArrowForwardIcon } from '@chakra-ui/icons'
-import { MenuButton, MenuItem, MenuList, IconButton, Menu, MenuButtonProps, background} from '@chakra-ui/react';
+import Logo from '../../../assets/img/logo.png';
+import {HamburgerIcon } from '@chakra-ui/icons'
+import { MenuButton, MenuItem, MenuList, IconButton, Menu, useMediaQuery} from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 
 function HamburgerMenu() {
@@ -17,10 +18,10 @@ function HamburgerMenu() {
                 className={s.menu}
             />
             <MenuList
-                backgroundColor="#18727D"
-                color="#ffff"
+                backgroundColor="#ffff"
+                color="#946702"
                 border="none"
-                w="350px"
+                w="200px"
             >
                 <MenuItem
                     _hover={{
@@ -28,28 +29,31 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                    <div>
                         <p>Cursos</p>
-                        <ArrowForwardIcon />
-                    </div>
                 </MenuItem>
-                <MenuItem>
-                    <div>
+                <MenuItem
+                    _hover={{
+                        color: '#946702',
+                        bgColor: '#E6E8EA'
+                    }}
+                >
                         <p>Planos</p>
-                        <ArrowForwardIcon />
-                    </div>
                 </MenuItem>
-                <MenuItem>
-                    <div>
+                <MenuItem
+                    _hover={{
+                        color: '#946702',
+                        bgColor: '#E6E8EA'
+                    }}
+                >
                         <p>Espaço</p>
-                        <ArrowForwardIcon />
-                    </div>
                 </MenuItem>
-                <MenuItem>
-                    <div>
+                <MenuItem
+                    _hover={{
+                        color: '#946702',
+                        bgColor: '#E6E8EA'
+                    }}
+                >
                         <p>Sobre Nós</p>
-                        <ArrowForwardIcon />
-                    </div>
                 </MenuItem>
             </MenuList>
         </Menu>
@@ -57,10 +61,17 @@ function HamburgerMenu() {
 }
 
 export function Header() {
+    const [isResponsive] = useMediaQuery('(max-width: 900px)');
+    const navigate = useNavigate();
+
     return (
         <div className={s['header-container']}>
             <div><HamburgerMenu /></div>
-            <Button variant="primary" onClick={() => ('')} type="button">Comece agora</Button>
+            {!isResponsive && (
+                <button onClick={() => navigate('/')}>
+                <img src={Logo} width="162px" height="64px" />
+            </button>
+            )}
         </div>
     )
 }
