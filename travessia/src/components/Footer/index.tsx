@@ -37,17 +37,30 @@ export function Footer() {
             </div>
             <div className={s['footer-container-buttons']}>
                 <div className={s['footer-buttons']}>
-                    <button className={s['facebook-button']} onClick={() => window.open('https://www.facebook.com/travessiapilates')}>
+                    <button
+                        className={s['facebook-button']}
+                        onClick={() => window.open('https://www.facebook.com/travessiapilates')}
+                        aria-label="acesse a página no facebook"
+                    >
                         <Face width="24px" height="24px" />
                     </button>
-                    <button className={s['youtube-button']} onClick={() => window.open('https://www.youtube.com/c/travessiapilates')}>
+                    <button
+                        className={s['youtube-button']}
+                        onClick={() => window.open('https://www.youtube.com/c/travessiapilates')}
+                        aria-label="acesse o canal no youtube"
+                    >
                         <Youtube width="24px" height="24px"/>
                     </button>
-                    <button className={s['instagram-button']} onClick={() => window.open('https://instagram.com/travessiapilates')}>
+                    <button
+                        className={s['instagram-button']}
+                        onClick={() => window.open('https://instagram.com/travessiapilates')}
+                        aria-label="acesse o perfil no instagram"
+                    >
                         <Insta width="24px" height="24px"/>
                     </button>
                     <button
                         className={s['whatsapp-button']}
+                        aria-label="envie uma mensagem no whatsapp"
                         onClick={
                             () => window.open(
                                 `https://wa.me/${PHONE}?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20
@@ -57,7 +70,11 @@ export function Footer() {
                         <Whats width="24px" height="24px"/>
                     </button>
                 </div>
-                <button className={s['privacy-policy-button']} onClick={() => navigate('/privacidade')}>
+                <button
+                    className={s['privacy-policy-button']} 
+                    onClick={() => navigate('/privacidade')}
+                    aria-label="Acesse a política de privacidade"
+                >
                     Política de Privacidade
                 </button>
             </div>

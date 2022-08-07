@@ -1,4 +1,4 @@
-import { Span, Subtitle, Title } from '../../components/Typography';
+import { Span, Title } from '../../components/Typography';
 import s from './style.module.scss';
 
 function Testimonial({ description, name }: { description: string; name: string; }) {
@@ -16,29 +16,24 @@ function Testimonial({ description, name }: { description: string; name: string;
 
 export function TestimonialsSection() {
     return (
-        <div className={s['testimonials-section']} >
+        <div className={s['testimonials-section']} id="testimonials">
             <Title>Depoimentos</Title>
             <div className={s['testimonials-container']}>
                <Testimonial
-                    description={`"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure provident iste quod nisi maxime eligendi 
-                    sunt enim repellat consequatur, temporibus cupiditate minima, 
-                    saepe neque corrupti officia nesciunt eos"`}
-                    name="Maria das Dores"
+                    description={`"O espaço é bem equipado e organizado, as aulas são divididas em turmas pequenas para que as 
+                    instrutoras consigam acompanhar todos os alunos."`}
+                    name="Vanessa A."
                />
                <Testimonial
-                    description={`"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure provident iste quod nisi maxime eligendi 
-                    sunt enim repellat consequatur, temporibus cupiditate minima, 
-                    saepe neque corrupti officia nesciunt eos"`}
-                    name="Dorna Ciática"
+                    description={`"Maravilhoso….O ambiente é delicioso tudo pensado com muito carinho!!! 
+                    As aulas são maravilhosas (...). O pilates está mudando minha vida!!!!"`}
+                    name="Andrea A. de S."
                />
                <Testimonial
-                    description={`"Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Iure provident iste quod nisi maxime eligendi 
-                    sunt enim repellat consequatur, temporibus cupiditate minima, 
-                    saepe neque corrupti officia nesciunt eos"`}
-                    name="José Doia Costa"
+                    description={`"Super recomendo a atividade de pilates,  com poucas aulas tenho melhora 
+                    perceptível na flexibilidade do corpo, nas dores nas costas que por ventura sentia, sem 
+                    contar que é um ótimo momento de auto cuidado e conhecimento corporal."`}
+                    name="Karen R."
                />
             </div>
         </div>

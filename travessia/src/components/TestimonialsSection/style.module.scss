@@ -27,6 +27,10 @@
     flex-direction: column;
     align-items: flex-end;
     max-width: 380px;
+
+    span {
+        margin-top: 12px;
+    }
 }
 
 .description {
@@ -34,6 +38,7 @@
     font-size: 22px;
     font-weight: 400;
     text-align: justify;
+    min-height: 230px;
 
     @media (max-width: 680px) {
         font-size: 16px;;

@@ -1,38 +1,62 @@
+@use '../../assets/styles/colors.scss' as colors;
+
 .container-course {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 380px;
-    height: 297px;
+    max-width: 390px;
+    height: 370px;
+    background-color: white;
+    border-radius: 14px;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
 
 .card-image {
-    max-width: 380px;
+    width: 100%;
     height: 214px;
-    border-radius: 6px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
 
     img {
         width: 100%;
         height: 100%;
-        border-radius: 6px;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
     }
 }
 
-.card-title, .card-description {
-    width: 100%;
-    text-align: left;
-    
+.card-title, .card-description, .card-duration {
+    text-align: center;
+    max-width: 300px;
 }
 
 .card-title {
-    color: white;
+    color: colors.$color-brand-primary-pure;
     font-size: 16px;
     font-weight: bold;
-    margin-top: 16px;
-    margin-bottom: 8px;
+    margin-top: 8px;
 }
 
-.card-description {
-    color: white;
+.card-subtitle {
+    color: colors.$color-brand-primary-pure;
     font-size: 14px;
+    font-weight: bold;
+}
+.card-description {
+    color: colors.$color-neutral-gray;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+.card-duration {
+    color: colors.$color-neutral-gray;
+    font-size: 14px;
+    margin-top: 10px;
 }

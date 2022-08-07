@@ -66,12 +66,12 @@ import { useNavigate } from 'react-router-dom';
             </div>
             <div className={s.footer}>
                 <div className={s.buttons}>
-                    <Button type="button" variant="primary" onClick={handleAccept} style={{ width: '140px' }}>
+                    <Button type="button" variant="primary" onClick={handleAccept} style={{ width: '140px' }} label="aceito">
                         Aceito
                     </Button>
                 </div>
                 <div className={s.buttons}>
-                    <Button type="button" variant="secondary" onClick={handleDecline} style={{ width: '140px' }}>
+                    <Button type="button" variant="secondary" onClick={handleDecline} style={{ width: '140px' }} label="não aceito">
                         Não aceito
                     </Button>
               </div>

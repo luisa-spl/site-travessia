@@ -6,11 +6,12 @@ interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
     onClick(): void;
     children: ReactNode;
     type: 'submit' | 'button';
+    label: string;
 }
 
-export function Button({ variant, onClick, children, type }: ButtonProps) {
+export function Button({ variant, onClick, children, type, label }: ButtonProps) {
     return (
-        <button type={type} onClick={onClick} className={`${s[variant]}`}>
+        <button type={type} onClick={onClick} className={`${s[variant]}`} aria-label={label}>
             {children}
         </button>
     )

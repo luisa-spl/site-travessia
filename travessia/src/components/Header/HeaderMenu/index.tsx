@@ -3,6 +3,7 @@ import Logo from '../../../assets/img/logo.png';
 import {HamburgerIcon } from '@chakra-ui/icons'
 import { MenuButton, MenuItem, MenuList, IconButton, Menu, useMediaQuery} from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
+import { Span } from '../../../components/Typography';
 
 
 function HamburgerMenu() {
@@ -29,7 +30,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                        <p>Cursos</p>
+                     <a href="#services"><p>Nossos Serviços</p></a>
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -37,7 +38,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                        <p>Planos</p>
+                    <a href="#pilates"><p>Pilates</p></a>    
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -45,7 +46,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                        <p>Espaço</p>
+                    <a href="#testimonials"><p>Depoimentos</p></a>
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -53,23 +54,28 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                        <p>Sobre Nós</p>
+                    <a href="#contacts"><p>Contatos</p></a>
                 </MenuItem>
             </MenuList>
         </Menu>
     )
 }
 
-export function Header() {
+export function Header({ isHome }: { isHome?: boolean; }) {
     const [isResponsive] = useMediaQuery('(max-width: 900px)');
     const navigate = useNavigate();
 
     return (
         <div className={s['header-container']}>
-            <div><HamburgerMenu /></div>
+            {isHome && <div><HamburgerMenu /></div>}
+            {!isHome && (
+                <button onClick={() => navigate('/')} className={s.home}>
+                    <Span>Voltar</Span>
+                </button>
+            )}
             {!isResponsive && (
                 <button onClick={() => navigate('/')}>
-                <img src={Logo} width="162px" height="64px" />
+                <img src={Logo} alt="logotipo travessia pilates" width="162px" height="64px" />
             </button>
             )}
         </div>

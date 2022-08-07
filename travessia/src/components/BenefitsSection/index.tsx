@@ -1,42 +1,39 @@
 import { CardWithImage } from 'components/CardWithImage';
 import { Paragraph, Title } from '../../components/Typography';
-import Pilates from  '../../assets/img/pilates-vertical.jpg';
+import Pilates from  '../../assets/img/benefits6.jpg';
 import s from './style.module.scss';
 import { Button } from 'components/Button';
+import { useNavigate } from 'react-router-dom';
 
 export function BenefitsSection() {
+    const navigate = useNavigate();
     return (
-        // <div>
-            <CardWithImage leftImage={false} cardImage={Pilates}>
-                <div className={s.container}>
-                    <div className={s.title}>
-                        <Title>Descubra com</Title>
-                        <Title> a gente os benefícios </Title>
-                        <Title>do pilates!</Title>
-                    </div>
-
-                    <Paragraph>
-                        No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-                        but because those who do not know how to pursue pleasure rationally encounter 
-                        consequences that are extremely painful.
-                    </Paragraph>
-                    <Paragraph>
-                        No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, 
-                        but because those who do not know how to pursue pleasure rationally encounter 
-                        consequences that are extremely painful.
-                    </Paragraph>
-                    <div className={s['benefits-action-button']}>
-                        <Button
-                            variant="primary"
-                            type="button"
-                            onClick={() => ('')}
-                            id='benefits-action-button'
-                        >
-                            Comece agora
-                        </Button>
-                    </div>
+        <CardWithImage leftImage={false} cardImage={Pilates}>
+            <div className={s.container} id="pilates">
+                <div className={s.title}>
+                    <Title>Por que fazer pilates?</Title>
                 </div>
-            </CardWithImage>
-        // </div>
+
+                <Paragraph>
+                    Seja para melhorar a qualidade de vida, sair do sedentarismo ou para aliviar dores 
+                    no corpo, o pilates costuma ser a primeira opção a ser indicada pelos especialistas.
+                </Paragraph>
+                <Paragraph>
+                Por ser uma atividade física sem impacto e com amplas possibilidades de adaptação dos exercícios,
+                    o pilates pode ser praticado por públicos muito variados e para alcançar diferentes objetivos.
+                </Paragraph>
+                <div className={s['benefits-action-button']}>
+                    <Button
+                        variant="primary"
+                        type="button"
+                        label="saiba mais"
+                        onClick={() => navigate('/beneficios')}
+                        id='benefits-action-button-know-more'
+                    >
+                        Saiba mais
+                    </Button>
+                </div>
+            </div>
+        </CardWithImage>
     )
 }

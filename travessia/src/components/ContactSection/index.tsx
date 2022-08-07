@@ -9,7 +9,7 @@ export function ContactsSection() {
     const [RESPONSIVE] = useMediaQuery("(max-width: 680px)");
 
     return (
-        <div className={s.container}>
+        <div className={s.container} id="contacts">
             <div className={s.contacts}>
                 <div className={s.title}>
                     <Title>Contato</Title>
@@ -47,17 +47,18 @@ export function ContactsSection() {
                        contato@travessiapilates.com.br
                     </Span>
                 </div>
-                <div className={s['benefits-action-button']}>
+                <div className={s['contacts-action-button']}>
                     <Button
                         variant="primary"
                         type="button"
+                        label="agende sua aula experimental"
                         onClick={
                             () => window.open(
                                 `https://wa.me/${PHONE}?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20
                                 informações%20sobre%20o%20espaço.%20Meu%20nome%20é`
                             )
                         }
-                        id='benefits-action-button'
+                        id='contacts-action-button'
                     >
                         Agende sua aula experimental
                     </Button>

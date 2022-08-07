@@ -1,0 +1,179 @@
+@use '../../assets/styles/colors.scss' as colors;
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$color-brand-primary-light;
+}
+
+.menu {
+    height: 120px;
+    background-image: url('../../assets/img/bg-primary-circles.png');
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 40px 12px 0px 40px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    p {
+        text-align: justify;
+  
+            color: colors.$color-brand-primary-pure; 
+            font-size: 22px;
+    }
+
+    h1 {
+        margin-bottom: 32px;
+    }
+
+    span {
+        font-weight: bold;
+        color: #18727D;
+    }
+
+    h1, h2 {
+        color: colors.$color-brand-primary-pure;
+    }
+
+    @media (max-width: 680px) {
+        flex-direction: column;
+        padding: 32px 32px 0px 32px;
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 0px;
+        }
+
+    }
+}
+
+.line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+}
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+}
+
+.dot {
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 50%;
+    background-color: colors.$color-brand-secondary-light;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 650px;
+}
+
+.content-left {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    max-width: 100%;
+    padding-bottom: 32px;
+
+    @media (max-width: 680px) {
+        align-items: center;
+    }
+}
+
+.image {
+    max-width: 600px;
+    height: 520px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin-top: auto;
+    margin-left: auto;
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+    }
+
+    @media (max-width: 680px) {
+        height: 480px;
+        
+        img {
+            height: 480px;
+            width: 100%;
+        }
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    padding: 40px;
+
+    @media (max-width: 680px) {
+        flex-direction: column;
+    }
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    padding: 40px;
+
+    @media (max-width: 680px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #18727D;
+    -webkit-box-shadow: 0px 4px 12px 5px #C4C4C4; 
+    box-shadow: 0px 4px 12px 5px #C4C4C4;
+    
+    h2 {
+        color: white;
+    }
+}
+
+.benefits-sections {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    button {
+        margin-top: 32px;
+        margin-bottom: 32px;
+        width: 250px;
+    }
+}

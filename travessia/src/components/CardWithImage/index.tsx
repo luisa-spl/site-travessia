@@ -19,7 +19,7 @@ export function CardWithImage({ children, leftImage, cardImage }: CardWithImageP
                 {children}
             </div>
             {!leftImage && (
-                <div className={s.image}>
+                <div className={s.image} >
                     <img src={cardImage} alt="imagem ilustrativa" />
                 </div>
             )}
