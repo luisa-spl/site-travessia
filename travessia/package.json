@@ -1,6 +1,7 @@
 {
   "name": "travessia",
   "version": "0.1.0",
+  "homepage": "https://travessiapilates.com.br",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.4",
