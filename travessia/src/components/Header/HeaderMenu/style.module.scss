@@ -3,19 +3,32 @@
 .header-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 25px;
     width: 100%;
-    height: 100%;
-
+    height: 150px;
+    background-color: white;
     font-family: 'Rubik', sans-serif;
+
+    @media (max-width: 650px) {
+        height: 90px;
+    }
 }
 
 .menu {
     border: none;
     color: colors.$color-brand-primary-pure;
     height: 24px;
+}
+
+.span {
+    color: colors.$color-brand-primary-pure;
+    margin-left: 2%;
+    margin-top: 6px;
+
+    span {
+        font-size: 24px;
+    }
 }
 
 .home {
@@ -25,4 +38,9 @@
         font-size: 18px;
         text-decoration: underline;
     }
+}
+
+.button {
+    margin-left: 25%;
+    margin-right: auto;
 }

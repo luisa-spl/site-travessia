@@ -7,13 +7,13 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background: #E6D5C0 url('../../../assets/img/cover.png') no-repeat bottom;
+    background: white url('../../../assets/img/cover.png') no-repeat bottom;
     background-size: cover;
     position: relative;
     overflow: hidden;
 
     @media (max-width: 900px) {
-        background: #E6D5C0;
+        background: white;
     }
 }
 

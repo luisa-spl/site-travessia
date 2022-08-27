@@ -1,6 +1,6 @@
 import s from './style.module.scss';
-import Logo from '../../../assets/img/logo.png';
-import {HamburgerIcon } from '@chakra-ui/icons'
+import Logo from '../../../assets/img/logo-terracota.png';
+import { HamburgerIcon } from '@chakra-ui/icons'
 import { MenuButton, MenuItem, MenuList, IconButton, Menu, useMediaQuery} from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 import { Span } from '../../../components/Typography';
@@ -8,15 +8,17 @@ import { Span } from '../../../components/Typography';
 
 function HamburgerMenu() {
     return (
-        <Menu>
+        <Menu size="64px">
             <MenuButton
                 as={IconButton}
                 aria-label='Opções'
-                icon={<HamburgerIcon boxSize="42px" />}
+                icon={<HamburgerIcon boxSize="64px" />}
                 variant='outline'
-                w="24px"
+                w="64px"
+                h="64px"
                 color="#946702"
                 className={s.menu}
+                border="none"
             />
             <MenuList
                 backgroundColor="#ffff"
@@ -68,15 +70,22 @@ export function Header({ isHome }: { isHome?: boolean; }) {
     return (
         <div className={s['header-container']}>
             {isHome && <div><HamburgerMenu /></div>}
+            {(isHome && !isResponsive) && (
+                <a href="#space" className={s.span}>
+                    <Span>
+                        Nosso espaço
+                    </Span>
+                </a>
+            )}
             {!isHome && (
                 <button onClick={() => navigate('/')} className={s.home}>
                     <Span>Voltar</Span>
                 </button>
             )}
             {!isResponsive && (
-                <button onClick={() => navigate('/')}>
-                <img src={Logo} alt="logotipo travessia pilates" width="162px" height="64px" />
-            </button>
+                <button onClick={() => navigate('/')} className={s.button}>
+                    <img src={Logo} alt="logotipo travessia pilates" width="172px" height="74px" />
+                </button>
             )}
         </div>
     )
