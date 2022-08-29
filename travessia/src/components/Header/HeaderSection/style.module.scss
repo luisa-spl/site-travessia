@@ -3,18 +3,25 @@
 
 .header-section {
     min-width: 100%;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
-    background: white url('../../../assets/img/cover.png') no-repeat bottom;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+    // position: relative;
+    // overflow: hidden;
 
     @media (max-width: 900px) {
         background: white;
     }
+}
+
+.cover {
+    display: flex;
+    width: 100%;
+    height: 900px;
+    background: black url('../../../assets/img/capa.png') no-repeat bottom;
+    // object-fit: contain;
+    background-size: cover;
 }
 
 .logo {
