@@ -11,21 +11,25 @@
     text-align: center;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Glacial', sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
 
 .primary {
     @extend %button;
-    background-color: colors.$color-brand-secondary-light;
+    background-color: colors.$color-brand-primary-pure;
     color: colors.$color-neutral-white;
-    border-radius: 2px;
+    border-radius: 26px;
+    font-weight: 600;
+    text-transform: none;
+    font-size: 14px;
+    max-width: 320px;
     transition: color 500ms ease, background-color 500ms ease;
 
     &:hover {
-        background-color: colors.$color-brand-secondary-lightest;
-        color: colors.$color-neutral-white;
+        background-color: colors.$color-brand-primary-light;
+        color: colors.$color-brand-primary-pure;
     }
 }
 
@@ -55,6 +59,7 @@
     color: colors.$color-brand-primary-pure;
     border: 2px solid colors.$color-brand-primary-pure;
     border-radius: 26px;
+    transition: opacity 300ms ease;
 
     &:hover {
         color: colors.$color-brand-primary-pure;
