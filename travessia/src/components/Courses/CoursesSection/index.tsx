@@ -5,7 +5,6 @@ import s from './style.module.scss';
 
 export function CoursesSection() {
     const [ responsive ] = useMediaQuery("(max-width: 980px)");
-    console.log(responsive)
 
     function renderContent() {
         if (responsive) {
