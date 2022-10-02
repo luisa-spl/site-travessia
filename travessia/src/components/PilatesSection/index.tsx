@@ -19,17 +19,18 @@ export function PilatesSection() {
                         Por ser uma atividade física sem impacto e com amplas possibilidades de adaptação dos exercícios, 
                         o pilates pode ser praticado por públicos muito variados e para alcançar diferentes objetivos.
                     </p>
+                    
+                    <div className={s['pilates-section-button']} id="pilates-section-experimental-class-btn">
+                        <Button
+                            onClick={() => ('')}
+                            variant="tertiary"
+                            type="button"
+                            label='agende sua aula experimental'
+                        >
+                            Agende sua aula experimental gratuita
+                        </Button>
+                    </div>
                 </div>
-            </div>
-            <div className={s['pilates-section-button']} id="pilates-section-experimental-class-btn">
-                <Button
-                    onClick={() => ('')}
-                    variant="tertiary"
-                    type="button"
-                    label='agende sua aula experimental'
-                >
-                    Agende sua aula experimental gratuita
-                </Button>
             </div>
         </div>
     );
