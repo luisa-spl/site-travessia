@@ -23,6 +23,14 @@
     position: relative;
     margin-top: auto;
     margin-bottom: auto;
+
+    img {
+        width: 300px;
+
+        @media (max-width: 980px) {
+            width: 200px;
+        }
+    }
 }
 
 .paragraph {
