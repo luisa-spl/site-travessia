@@ -1,0 +1,81 @@
+@use '../../assets/styles/colors.scss' as colors;
+
+.our-space-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 90vh;
+    gap: 32px;
+
+    @media (min-width: 1920px) {
+        gap: 100px;
+    }
+
+    @media (max-width: 980px) {
+        min-height: 80vh;
+        padding-top: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 680px;
+
+    p {
+        color: colors.$color-neutral-gray-light;
+        margin-left: 42px;
+        max-width: 480px;
+
+        @media (min-width: 1920px) {
+            max-width: 680px;
+        }
+
+        @media (max-width: 980px) {
+            margin-left: 0px;
+        }
+        
+    }
+
+    @media (max-width: 980px) {
+        // gap: 12px;
+        justify-content: space-between;
+        height: max-content;
+        padding: 0px 24px;
+    }
+}
+
+.title {
+    margin-bottom: 24px;
+    max-width: 640px;
+    
+    h1 {
+        color: colors.$color-brand-primary-pure;
+        font-size: 32px;
+        letter-spacing: 8.8px;
+    }
+
+    @media (max-width: 980px) {
+        margin-bottom: 14px;
+        h1 {
+            font-size: 24px;
+            line-height: 24px;
+        }
+    }
+}
+
+.benefits-action-button {
+    margin-top: 24px;
+    max-width: 500px;
+
+    @media (max-width: 980px) {
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+}
