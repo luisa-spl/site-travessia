@@ -19,7 +19,7 @@ export function HeaderSection() {
 
         {isResponsive && (
             <div className={s.logo} id="paragraph">
-                <img src={Logo} alt="travessia" width="300px" />
+                <img src={Logo} alt="travessia"  />
             </div>
         )}
         </section>
