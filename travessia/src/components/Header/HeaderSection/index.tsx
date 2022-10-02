@@ -1,6 +1,5 @@
 import { Header } from '../HeaderMenu';
 import Logo from '../../../assets/img/logo-sm.png';
-import Cover from '../../../assets/img/capa.png';
 import s from './style.module.scss';
 import 'aos/dist/aos.css';
 import { useMediaQuery } from '@chakra-ui/react';
@@ -13,8 +12,9 @@ export function HeaderSection() {
             <div className={s.menu}>
                 <Header isHome />
             </div>
+        
         {!isResponsive && (
-            <img src={Cover} alt="capa" />
+            <img src="https://i.ibb.co/Cw4S65v/CAPA.png" alt="capa" />
         )}
 
         {isResponsive && (
