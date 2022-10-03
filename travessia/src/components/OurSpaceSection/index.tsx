@@ -1,12 +1,10 @@
 import { Paragraph, Title } from '../Typography';
 import s from './style.module.scss';
 import { Button } from 'components/Button';
-import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from '@chakra-ui/react';
 
 export function OurSpaceSection() {
     const [responsive] = useMediaQuery("(max-width: 980px)");
-    const navigate = useNavigate();
 
     return (
         <div className={s['our-space-section']}>
@@ -34,8 +32,8 @@ export function OurSpaceSection() {
                         variant="primary"
                         type="button"
                         label="saiba mais"
-                        onClick={() => navigate('/beneficios')}
-                        id='benefits-action-button-know-more'
+                        onClick={() => window.open('https://app.tecnofit.com.br/tfRedirect?u=4751B23E025D', '_blank')}
+                        id='our-space-action-button'
                     >
                         Agende sua aula experimental gratuita
                     </Button>

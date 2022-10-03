@@ -8,7 +8,6 @@ export function CoursesSection() {
 
     function renderContent() {
         if (responsive) {
-            console.log('entrou aqui 1')
             return (
                 <CourseCarousel name='courses' marginLeft='16px'>
                     <CourseCard
@@ -65,7 +64,7 @@ export function CoursesSection() {
     }
 
     return (
-        <div className={s['courses-section']}>    
+        <div className={s['courses-section']} id="course-section">    
             {renderContent()}  
         </div>
     )
