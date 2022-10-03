@@ -7,15 +7,17 @@ import { Span } from '../../../components/Typography';
 
 
 function HamburgerMenu() {
+    const [RESPONSIVE] = useMediaQuery("(max-width: 680px)")
+
     return (
         <Menu size="64px">
             <MenuButton
                 as={IconButton}
                 aria-label='Opções'
-                icon={<HamburgerIcon boxSize="64px" />}
+                icon={<HamburgerIcon boxSize={RESPONSIVE ? "54px" : "64px"} />}
                 variant='outline'
-                w="64px"
-                h="64px"
+                w={RESPONSIVE ? "54px" : "64px"}
+                h={RESPONSIVE ? "54px" : "64px"}
                 color="#946702"
                 className={s.menu}
                 border="none"
@@ -32,7 +34,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                     <a href="#services"><p>Nossos Serviços</p></a>
+                     <a href="#course-section"><p>Nossos Serviços</p></a>
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -40,7 +42,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                    <a href="#pilates"><p>Pilates</p></a>    
+                    <a href="#pilates-section"><p>Pilates</p></a>    
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -48,7 +50,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                    <a href="#testimonials"><p>Depoimentos</p></a>
+                    <a href="#testimonials-section"><p>Depoimentos</p></a>
                 </MenuItem>
                 <MenuItem
                     _hover={{
@@ -56,7 +58,7 @@ function HamburgerMenu() {
                         bgColor: '#E6E8EA'
                     }}
                 >
-                    <a href="#contacts"><p>Contatos</p></a>
+                    <a href="#contacts-section"><p>Contatos</p></a>
                 </MenuItem>
             </MenuList>
         </Menu>
@@ -70,13 +72,13 @@ export function Header({ isHome }: { isHome?: boolean; }) {
     return (
         <div className={s['header-container']}>
             {isHome && <div><HamburgerMenu /></div>}
-            {(isHome && !isResponsive) && (
+            {/* {(isHome && !isResponsive) && (
                 <a href="#space" className={s.span}>
                     <Span>
                         Nosso espaço
                     </Span>
                 </a>
-            )}
+            )} */}
             {!isHome && (
                 <button onClick={() => navigate('/')} className={s.home}>
                     <Span>Voltar</Span>
