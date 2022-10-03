@@ -35,7 +35,6 @@ export function CoursesSection() {
         }
 
         if (!responsive) {
-            console.log('entrou aqui')
             return (
                 <>
                     <CourseCard

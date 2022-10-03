@@ -1,5 +1,6 @@
 import { Header } from '../HeaderMenu';
 import Logo from '../../../assets/img/logo-sm.png';
+import Cover from '../../../assets/img/CAPA.png';
 import s from './style.module.scss';
 import 'aos/dist/aos.css';
 import { useMediaQuery } from '@chakra-ui/react';
@@ -14,7 +15,7 @@ export function HeaderSection() {
             </div>
         
         {!isResponsive && (
-            <img src="https://i.ibb.co/Cw4S65v/CAPA.png" alt="capa" />
+            <img src={Cover} alt="capa" />
         )}
 
         {isResponsive && (
