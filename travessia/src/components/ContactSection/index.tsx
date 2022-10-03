@@ -3,16 +3,14 @@ import { Button } from '../../components/Button';
 import { Span, Subtitle, Title } from '../../components/Typography';
 import s from './style.module.scss';
 
-const PHONE = '5511982123172'
-
 export function ContactsSection() {
     const [RESPONSIVE] = useMediaQuery("(max-width: 680px)");
 
     return (
-        <div className={s.container} id="contacts">
+        <div className={s.container} id="contacts-section">
             <div className={s.contacts}>
                 <div className={s.title}>
-                    <Title>Contato</Title>
+                    <Title>CONTATOS</Title>
                 </div>
                 <div className={s.address}>
                     <Subtitle>
@@ -53,14 +51,11 @@ export function ContactsSection() {
                         type="button"
                         label="agende sua aula experimental"
                         onClick={
-                            () => window.open(
-                                `https://wa.me/${PHONE}?text=Olá!%20Visitei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20
-                                informações%20sobre%20o%20espaço.%20Meu%20nome%20é`
-                            )
+                            () => window.open('https://app.tecnofit.com.br/tfRedirect?u=4751B23E025D', '_blank')
                         }
                         id='contacts-action-button'
                     >
-                        Agende sua aula experimental
+                        Agende sua aula experimental gratuita
                     </Button>
                 </div>
             </div>
