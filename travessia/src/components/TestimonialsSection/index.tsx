@@ -16,7 +16,7 @@ function Testimonial({ description, name }: { description: string; name: string;
 
 export function TestimonialsSection() {
     return (
-        <div className={s['testimonials-section']} id="testimonials">
+        <div className={s['testimonials-section']} id="testimonials-section">
             <Title>Depoimentos</Title>
             <div className={s['testimonials-container']}>
                <Testimonial

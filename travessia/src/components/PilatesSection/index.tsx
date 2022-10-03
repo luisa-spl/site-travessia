@@ -3,7 +3,7 @@ import s from './style.module.scss';
 
 export function PilatesSection() {
     return (
-        <div className={s['pilates-section']}>
+        <div className={s['pilates-section']} id="pilates-section">
             <div className={s['pilates-section-texts']}>
                 <div className={s['pilates-section-text-left']}>
                     <p>PORQUE</p>
@@ -22,10 +22,11 @@ export function PilatesSection() {
                     
                     <div className={s['pilates-section-button']} id="pilates-section-experimental-class-btn">
                         <Button
-                            onClick={() => ('')}
+                            onClick={() => window.open('https://app.tecnofit.com.br/tfRedirect?u=4751B23E025D', '_blank')}
                             variant="tertiary"
                             type="button"
                             label='agende sua aula experimental'
+                            id="pilates-section-action-btn"
                         >
                             Agende sua aula experimental gratuita
                         </Button>
